@@ -68,7 +68,9 @@ public class Haptic {
         case .error:
             self.notificationFeedbackGenerator.notificationOccurred(.error)
         }
+        #if DEBUG
         print("gave haptics")
+        #endif
     }
     public init() {
         self.prepare()

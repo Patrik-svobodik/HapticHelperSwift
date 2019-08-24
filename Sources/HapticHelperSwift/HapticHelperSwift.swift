@@ -1,7 +1,7 @@
 #if !os(macOS)
 import Foundation
 import UIKit
-enum HapticType {
+public enum HapticType {
     case extraLight
     case light
     case medium
@@ -12,7 +12,7 @@ enum HapticType {
     case error
 }
 @available(iOS 13.0, *)
-class Haptic {
+public class Haptic {
     let lightImpactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
     let mediumImpactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
     let strongImpactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)

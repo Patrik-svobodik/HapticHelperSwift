@@ -11,7 +11,7 @@ enum HapticType {
     case warning
     case error
 }
-@available(iOS 10.0, *)
+@available(iOS 13.0, *)
 class Haptic {
     let lightImpactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
     let mediumImpactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)

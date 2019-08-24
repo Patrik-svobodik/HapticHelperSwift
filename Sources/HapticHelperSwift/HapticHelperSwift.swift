@@ -49,7 +49,7 @@ public class Haptic {
             self.notificationFeedbackGenerator.prepare()
         }
     }
-    func give(_ type: HapticType = .light) {
+    public func give(_ type: HapticType = .light) {
         switch type {
         case .extraLight:
             self.selectionFeedbackGenerator.selectionChanged()
@@ -70,7 +70,7 @@ public class Haptic {
         }
         print("gave haptics")
     }
-    init() {
+    public init() {
         self.prepare()
     }
 }

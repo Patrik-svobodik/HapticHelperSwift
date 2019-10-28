@@ -13,7 +13,7 @@ public enum HapticType {
 }
 @available(iOS 13.0, *)
 public class Haptic {
-    static var shared = Haptic()
+    public static var shared = Haptic()
     let lightImpactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
     let mediumImpactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
     let strongImpactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)

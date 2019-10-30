@@ -3,6 +3,7 @@ import Foundation
 import UIKit
 public enum HapticType {
     case extraLight
+    case selection
     case light
     case medium
     case heavy
@@ -25,6 +26,8 @@ public class Haptic {
         if type != nil {
             switch type! {
             case .extraLight:
+                self.selectionFeedbackGenerator.prepare()
+            case .selection:
                 self.selectionFeedbackGenerator.prepare()
             case .light:
                 self.lightImpactFeedbackgenerator.prepare()
@@ -53,6 +56,8 @@ public class Haptic {
     public func give(_ type: HapticType = .light) {
         switch type {
         case .extraLight:
+            self.selectionFeedbackGenerator.selectionChanged()
+        case .selection:
             self.selectionFeedbackGenerator.selectionChanged()
         case .light:
             self.lightImpactFeedbackgenerator.impactOccurred()
